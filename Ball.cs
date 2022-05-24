@@ -8,20 +8,21 @@ using Raylib_cs;
 
 namespace Raylibtest
 {
+
     public class Ball
     {
-
         public static float X = Raylib.GetScreenWidth() / 2;
         public static float Y = Raylib.GetScreenHeight() / 2;
         public static float Radius = 5.0f;
         public static float SpeedX = 200.0f;
         public static float SpeedY = 200.0f;
-
         public static string WinnerText = null;
+
 
         public static void BallDraw()
         {
             Raylib.DrawCircle((int)Ball.X, (int)Ball.Y, Ball.Radius, Color.WHITE);
+
         }
         public static float BallMovingX()
         {
@@ -45,14 +46,16 @@ namespace Raylibtest
             }
             return SpeedY;
         }
-        public static void BallColideRectengle()
+        public static bool BallColideRectengle()
         {
             if (Raylib.CheckCollisionCircleRec(Vector2(X, Y), Radius, LeftRec.RectangleLeft(LeftRec.X, LeftRec.Y, LeftRec.Width, LeftRec.Height)))
             {
                 if (SpeedX < 0)
                 {
                     SpeedX *= -1.1f;
+                    return true;
                     //SpeedY = (Y - LeftRec.Y) / (LeftRec.Width / 2) * SpeedX;
+
                 }
             }
             if (Raylib.CheckCollisionCircleRec(Vector2(X, Y), Radius, RightRec.RectangleRight(RightRec.X, RightRec.Y, RightRec.Width, RightRec.Height)))
@@ -61,14 +64,16 @@ namespace Raylibtest
                 if (SpeedX > 0)
                 {
                     SpeedX *= -1.1f;
+                    return true;
                     // = (Y - RightRec.Y) / (RightRec.Width / 2) * SpeedX;
                 }
             }
+            return false;
         }
 
         private static Vector2 Vector2(float x, float y)
         {
-            return new Vector2(x,y);
+            return new Vector2(x, y);
         }
 
         public static void WinnerCheck()
@@ -76,11 +81,13 @@ namespace Raylibtest
             if (X < 0)
             {
                 WinnerText = "Right player wins!";
+
             }
-            if (X>Raylib.GetScreenWidth())
+            if (X > Raylib.GetScreenWidth())
             {
                 WinnerText = "Left player wins!";
             }
+
         }
         public static float BallColideX()
         {

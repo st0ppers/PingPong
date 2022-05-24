@@ -11,14 +11,28 @@ namespace HelloWorld
             Raylib.InitWindow(800, 600, "Hello World");
             Raylib.SetWindowState(ConfigFlags.FLAG_VSYNC_HINT); //creating vsync (fps for your monitors max hrz)
 
+            Raylib.InitAudioDevice();
+            Raylib.SetMasterVolume(0.1f);
+
+            Sound hit = Raylib.LoadSound("D:/Coding/OOP/Raylibtest/Raylibtest/game_sound.wav");
+            Sound win = Raylib.LoadSound("D:/Coding/OOP/Raylibtest/Raylibtest/Win.wav");
+
+
+
             while (!Raylib.WindowShouldClose())
             {
                 Ball.BallMovingX();
                 Ball.BallMovingY();
 
                 Ball.BallColdieY();
-                Ball.BallColideRectengle();
 
+                if (Ball.BallColideRectengle())
+                {
+                    Raylib.PlaySound(hit);
+                }
+
+
+                Ball.BallColideRectengle();
                 Ball.WinnerCheck();
 
                 Raylib.BeginDrawing();
@@ -36,9 +50,11 @@ namespace HelloWorld
                 RightRec.OutOfMapRight();
                 LeftRec.OutOfMapLeft();
 
+               
 
                 if (Ball.WinnerText != null)
                 {
+
                     int TimerWidth = Raylib.MeasureText("5", 60);
                     int WinnerTextWidth = Raylib.MeasureText(Ball.WinnerText, 60);
                     Raylib.DrawText(Ball.WinnerText, Raylib.GetScreenWidth() / 2 - WinnerTextWidth / 2, Raylib.GetScreenWidth() / 2 - 30, 60, Color.YELLOW);
@@ -47,6 +63,7 @@ namespace HelloWorld
                         Timer--;
                         Raylib.DrawText("Game will rest in:", Raylib.GetScreenWidth() / 2 - WinnerTextWidth / 2, 170, 60, Color.YELLOW);
                         Raylib.DrawText(((Timer / 100) + 1).ToString(), Raylib.GetScreenWidth() / 2 - TimerWidth / 2, Raylib.GetScreenHeight() / 2 - 30, 60, Color.YELLOW);
+
                         if (Timer == 0)
                         {
                             Ball.X = Raylib.GetScreenWidth() / 2;
@@ -70,6 +87,12 @@ namespace HelloWorld
                 Raylib.EndDrawing();
             }
 
+
+            Raylib.UnloadSound(hit);
+            Raylib.UnloadSound(win);
+
+
+            Raylib.CloseAudioDevice();
             Raylib.CloseWindow();
         }
     }
