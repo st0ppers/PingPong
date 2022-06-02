@@ -18,3 +18,11 @@ D:\Coding\OOP\Raylibtest\Raylibtest\obj\Debug\net5.0\refint\Raylibtest.dll
 D:\Coding\OOP\Raylibtest\Raylibtest\obj\Debug\net5.0\Raylibtest.pdb
 D:\Coding\OOP\Raylibtest\Raylibtest\obj\Debug\net5.0\Raylibtest.genruntimeconfig.cache
 D:\Coding\OOP\Raylibtest\Raylibtest\obj\Debug\net5.0\ref\Raylibtest.dll
+D:\Coding\GitPingPong\PingPong\obj\Debug\net5.0\Raylibtest.csproj.AssemblyReference.cache
+D:\Coding\GitPingPong\PingPong\obj\Debug\net5.0\Raylibtest.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\GitPingPong\PingPong\obj\Debug\net5.0\Raylibtest.AssemblyInfoInputs.cache
+D:\Coding\GitPingPong\PingPong\obj\Debug\net5.0\Raylibtest.AssemblyInfo.cs
+D:\Coding\GitPingPong\PingPong\obj\Debug\net5.0\Raylibtest.csproj.CoreCompileInputs.cache
+D:\Coding\GitPingPong\PingPong\obj\Debug\net5.0\Raylibtest.dll
+D:\Coding\GitPingPong\PingPong\obj\Debug\net5.0\refint\Raylibtest.dll
+D:\Coding\GitPingPong\PingPong\obj\Debug\net5.0\Raylibtest.pdb

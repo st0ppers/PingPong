@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Coding\\OOP\\Raylibtest\\Raylibtest\\Raylibtest.csproj",
+      "projectUniqueName": "D:\\Coding\\GitPingPong\\PingPong\\Raylibtest.csproj",
       "projectName": "Raylibtest",
-      "projectPath": "D:\\Coding\\OOP\\Raylibtest\\Raylibtest\\Raylibtest.csproj",
+      "projectPath": "D:\\Coding\\GitPingPong\\PingPong\\Raylibtest.csproj",
       "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-      "outputPath": "D:\\Coding\\OOP\\Raylibtest\\Raylibtest\\obj\\",
+      "outputPath": "D:\\Coding\\GitPingPong\\PingPong\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
